@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.test.listeners.TestListeners"></listener>
+    </listeners>
+    <test parallel="methods" thread-count="1" name="C:/manas/APITestingFramework">
+        <classes>
+            <class name="com.test.tests.GetTests">
+                <methods>
+                    <include name="getTravellerDetails" />
+                    <include name="getPhotoDetails" />
+                    <include name="getPhotoDetailsUsingDataProvider" />
+                </methods>
+            </class>
+            <class name="com.test.tests.PostTest">
+                <methods>
+                    <include name="bookTicketTest" />
+                    <include name="bookTicketUsingJSONFile" />
+                    <include name="bookTicketUsingJSONFile1" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

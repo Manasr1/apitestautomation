@@ -1,0 +1,8 @@
+FROM maven:3.6.3-jdk-8
+//FROM manasqa/java8-3.6.3-testdep
+COPY src home/framework/src
+COPY index.html home/framework/index.html
+COPY pom.xml home/framework/pom.xml
+COPY testng.xml home/framework/testng.xml
+WORKDIR home/framework
+ENTRYPOINT mvn clean test
